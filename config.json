@@ -1,0 +1,160 @@
+{
+  "info": {
+    "phone": "07424605611",
+
+    "openinghours": "10am",
+    "closinghours": "5pm",
+    "closeday": "Friday:",
+    "openorclose": "Closed",
+
+    "company": "Masss Tailor,",
+    "address": "68 King St (Unit 7) Sidhu Market, Southall",
+    "postcode": "UB5 4DD"
+  },
+
+  "services": {
+    "images": {
+      "0": "img/services/IndianDress.jpg",
+      "1": "img/services/punjabi_suit.jpg",
+      "2": "img/services/saree_blouse.jpg",
+      "3": "img/services/saree_fall.jpg",
+      "4": "img/services/unnamed.jpg",
+      "5": "img/services/2.jpg",
+      "6": "img/services/images.jpg"
+    },
+
+    "title": {
+      "0": "Indian Dress",
+      "1": "Punjabi Suits",
+      "2": "Saree Blouses",
+      "3": "Saree Falls",
+      "4": "Suit",
+      "5": "Alterations",
+      "6": "Garment Repairs"
+    },
+
+    "description": {
+      "first": [
+        "Made to measure",
+        "Cut and fitted to the shape",
+        "Fitting session is available",
+        "A perfect fit"
+      ],
+      "second": [
+        "Handmade bespoke suit service",
+        "Made and fits",
+        "Personally hand drafted",
+        "Fitting session is available"
+      ],
+      "third": [
+        "Alterations provided",
+        "Measurement by sample",
+        "Designs to match and fit",
+        "Inshop Measurements"
+      ],
+      "forth": [
+        "Professionally stitched saree falls",
+        "Exotic patterns and borders accents",
+        "Unbeatable pricing",
+        "Measurement by sample"
+      ],
+      "fifth": [
+        "Made to measure",
+        "Custom suit",
+        "Custom shirts",
+        "Inshop Measurements"
+      ],
+      "sixth": [
+        "Pants, blouses, skirts, dresses",
+        "Suit",
+        "Length/Waist",
+        "Any other alterations you need help with"
+      ],
+      "seventh": [
+        "Repair lining or relining",
+        "Sew on loose buttons",
+        "Repair, remove or replace zips",
+        "Repair Seams"
+      ]
+    },
+
+    "pages": {
+      "one": {
+        "title": "Indian Dress",
+        "description": "Our made to measure Indian Dress service starts with a personalised one to one meeting at our premises. All Indian suits are hand drafted, cut and fitted to the shape and style of our customers. Fitting session is available and re-shaping or re-styling is given to make the dress a perfect fit. ",
+        "price": "Price: £30"
+      },
+      "two": {
+        "title": "Punjabi Suits",
+        "description": "Punjabi Suits are personally hand drafted, cut and fitted to the shape and style of our customers. Punjabi suits are impeccably made and fits and feels better than any other readymade suits.",
+        "price": "£30"
+      },
+      "three": {
+        "title": "Saree Blouses",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolores eaque eius numquam asperiores a alias rerum neque? Laboriosam, deserunt?",
+        "price": "£30"
+      },
+      "four": {
+        "title": "Saree Falls",
+        "description": "Variety of professionally stitched saree falls. Exotic patterns and borders accents the elegance of your sarees. Unbeatable pricing, collection.",
+        "price": "£30"
+      },
+      "five": {
+        "title": "Suit",
+        "description": "Whether you are looking for the perfect bespoke suit, a flexible made to measure suit or a highly customised tailored suit, we are the best tailors to go to!",
+        "price": "£30"
+      },
+      "six": {
+        "title": "Alterations",
+        "description": "Alterations of pants, blouses, skirts, dresses, sew on loose buttons or pins. Alterations to pants and jeans. Shorten or lengthen, take in or let out. Personalise your outfit. Any other alterations, western or Indian you need help with.",
+        "price": "£30"
+      },
+      "seven": {
+        "title": "Garment Repairs",
+        "description": "Repair lining or relining. Sew on loose buttons or pins. Repair straps, remove or replace zips. Repair Seams",
+        "price": "£30"
+      }
+    }
+  },
+
+  "gallery": {
+    "img-3": "img/Hero/IMG_8572.jpg",
+    "img-2": "img/Hero/IMG_8626.jpg",
+    "img-1": "img/Hero/IMG_8646.jpg",
+    "img0": "img/Hero/IMG_8672.jpg",
+    "img1": "img/Gallery_Img/1.jpg",
+    "img2": "img/Gallery_Img/2.jpg",
+    "img3": "img/Gallery_Img//3.jpg",
+    "img4": "img/Gallery_Img/4.jpg",
+    "img5": "img/Gallery_Img/5.jpg",
+    "img6": "img/Gallery_Img/6.jpg",
+    "img7": "img/Gallery_Img/7.jpg",
+    "img8": "img/Gallery_Img/8.jpg",
+    "img9": "img/Gallery_Img/9.jpg",
+    "img10": "img/Gallery_Img/10.jpg",
+    "img11": "img/Gallery_Img/11.jpg",
+    "img12": "img/Gallery_Img/12.jpg",
+    "img13": "img/Gallery_Img/13.jpg",
+    "img14": "img/Gallery_Img/14.jpg",
+    "img15": "img/Gallery_Img/15.jpg",
+    "img16": "img/Gallery_Img/16.jpg",
+    "img17": "img/Gallery_Img/17.jpg",
+    "img18": "img/Gallery_Img/18.jpg",
+    "img19": "img/Gallery_Img/19.jpg",
+    "img20": "img/Gallery_Img/20.jpg",
+    "img21": "img/Gallery_Img/21.jpg",
+    "img22": "img/Gallery_Img/22.jpg",
+    "img23": "img/Gallery_Img/23.jpg",
+    "img24": "img/Gallery_Img/24.jpg",
+    "img25": "img/Gallery_Img/25.jpg",
+    "img26": "img/Gallery_Img/26.jpg",
+    "img27": "img/Gallery_Img/27.jpg",
+    "img28": "img/Gallery_Img/28.jpg",
+    "img29": "img/Gallery_Img/29.jpg",
+    "img30": "img/Gallery_Img/30.jpg",
+    "img31": "img/Gallery_Img/31.jpg",
+    "img32": "img/Gallery_Img/32.jpg",
+    "img33": "img/Gallery_Img/33.jpg",
+    "img34": "img/Gallery_Img/34.jpg"
+  }
+}
