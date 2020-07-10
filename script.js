@@ -19,13 +19,24 @@ var openOrClosed = document.getElementById("openorclosed");
 var serviceLink = document.querySelectorAll("#servicelink");
 var serviceTitleInside = document.querySelectorAll("#test");
 
+
+// preloader animation
+window.onload = function () {
+  //hide the preloader
+  $("#status").fadeOut(), $("#preloader").fadeOut("slow"), $("body").delay(350).css({
+    overflow: "visible"
+  })
+}
+
+
+
 var jsonload = new XMLHttpRequest();
-var url = "http://127.0.0.1:5500/config.json";
+var url = "config.json";
 
 jsonload.open("GET", url, true);
 jsonload.send();
 
-jsonload.onload = function() {
+jsonload.onload = function () {
   var arr = JSON.parse(this.responseText);
 
   //cta for call box
@@ -195,7 +206,7 @@ fetch("config.json")
             lightbox.classList.add("show");
 
             if (close) {
-              window.onclick = function(e) {
+              window.onclick = function (e) {
                 if (e.target == lightboxOuter) {
                   lightbox.classList.remove("show");
                 }
@@ -255,3 +266,5 @@ function mapsSelector() {
   /* else use Google */ else
     window.open("https://goo.gl/maps/Wu47Wmqhdo3oeFn28");
 }
+
+
