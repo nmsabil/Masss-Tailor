@@ -22,8 +22,9 @@ var serviceTitleInside = document.querySelectorAll("#test");
 
 // preloader animation
 window.onload = function () {
+  var status = document.getElementById("status");
   //hide the preloader
-  $("#status").fadeOut(), $("#preloader").fadeOut("slow"), $("body").delay(350).css({
+  $("#status").fadeOut(), $("#preloader").fadeOut(), $("body").delay(350).css({
     overflow: "visible"
   })
 }
