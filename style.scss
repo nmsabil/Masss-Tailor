@@ -23,24 +23,29 @@ body {
 }
 
 .container {
-  max-width: 90%;
+  max-width: 100%;
 
   margin: 0 auto;
 
   //header
   header {
+    z-index: 100;
+    position: sticky;
     background-color: black;
     display: flex;
     justify-content: space-between;
     height: auto;
     align-items: center;
-    border-bottom: 2px solid $dark-color;
-    padding: 1.5rem 0;
+    top: 0;
+    left: 0;
+
+    padding: 1.5rem 5%;
 
     .logo {
       img {
-        width: 20%;
+        width: 150px;
         margin-left: 1rem;
+        object-fit: scale-down;
       }
     }
     .phone-number {
@@ -76,7 +81,7 @@ body {
 
   @keyframes mymove {
     from {
-      transform: rotate(10deg);
+      transform: rotate(20deg);
     }
     to {
       transform: rotate(0deg);
@@ -85,14 +90,13 @@ body {
 
   //navigation bar
   nav {
-    padding: 1rem 3rem;
+    padding: 1rem 0rem;
 
-    margin-bottom: 1rem;
     margin-left: auto;
     margin-right: auto;
 
     .nav-main {
-      width: 50%;
+      width: 100%;
       margin-left: auto;
       margin-right: auto;
       padding: 0.5rem 2rem;
@@ -258,7 +262,7 @@ body {
 main {
   img {
     border: 1px solid #bc9b5d;
-    max-height: 70vh;
+    max-height: 80vh;
     object-fit: cover;
     object-position: center top;
   }
@@ -311,7 +315,7 @@ main {
   /* Caption text */
   .text {
     margin: 0 auto;
-    color: #bc9b5d;
+    color: white;
     font-size: 2rem;
     padding: 8px 12px;
     position: absolute;
