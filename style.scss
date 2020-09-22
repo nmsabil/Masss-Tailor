@@ -143,7 +143,7 @@ body {
     background-color: black;
     margin-top: -20px;
     width: 100%;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
 
     h1 {
       padding-bottom: 2rem;
@@ -390,12 +390,26 @@ main {
 }
 
 // contact page
-.container main .col2 {
+
+.contactAddress {
+  h2 {
+    padding-bottom: 3rem;
+    font-size: 3rem;
+    color: #bc9b5d;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+main .col2 {
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
-  width: 70%;
+  width: 80%;
+  color: white;
   margin-bottom: 3rem;
+  border: 1px solid #bc9b5d;
+  border-radius: 5px;
+  padding: 10px;
 
   h1 {
     margin-bottom: 1rem;
@@ -427,14 +441,17 @@ main {
 }
 
 .form-container {
-  border-top: 1px solid black;
-  width: 100%;
+  border: 1px solid #bc9b5d;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
   padding-top: 2rem;
   margin-bottom: 2rem;
+  margin-top: 30px;
   .contact-form {
-    h1 {
-      margin-bottom: 1rem;
-    }
     text-align: center;
     margin: 0 auto;
     display: flex;
@@ -444,40 +461,66 @@ main {
 
     label {
       font-size: 2rem;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.5rem;
     }
 
     input {
       width: 30%;
       font-size: 2.3rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       height: 3rem;
+      background-color: black;
+      border: 1px solid #bc9b5d;
+      color: white;
       &:last-child {
         height: 20px;
       }
     }
     textarea {
-      width: 50%;
+      min-width: 80%;
       height: 10rem;
       margin-bottom: 1rem;
       font-size: 2.5rem;
+
+      background-color: black;
+      border: 1px solid #bc9b5d;
+      color: white;
     }
     button {
+      border-radius: 100px;
+      color: #bc9b5d;
+      font-size: 1.5rem;
+      border: 0.5px solid #bc9b5d;
+      padding: 0.9rem;
+      margin-right: 1rem;
+      letter-spacing: 1px;
       width: 30%;
-      height: 4rem;
-      margin-top: 1rem;
-      background-color: rgba(29, 150, 29, 0.4);
-      font-size: 2rem;
+      display: inline;
+      background-color: black;
       cursor: pointer;
+      box-shadow: 1px 1px 1px transparent;
+      transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) all;
+      margin-bottom: 10px;
+      margin-top: 10px;
+
+      &:hover {
+        box-shadow: 1px 1px 1px #bc9b5d;
+        border: 1px solid #bc9b5d;
+        box-shadow: 1px 1px 1px #bc9b5d;
+      }
     }
   }
 }
 
 .container #map {
-  border-top: 1px solid black;
   height: 500px;
   width: 100%;
   margin-bottom: 2rem;
+  margin: 0 auto;
+}
+
+.container-map #map > div {
+  background-color: black !important;
 }
 
 //gallery

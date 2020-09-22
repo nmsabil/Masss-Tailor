@@ -281,6 +281,67 @@
       </div>
     </section>
 
+    <main class="contactAddress">
+      <h2>Contact</h2>
+      <div class="col2">
+        <div class="address">
+          
+          <h1> <span><i class="fas fa-map-marked-alt"></i></span> Address:</h1>
+          <a id="phonenumbera"  style="text-decoration: underline; color: #bc9b5d; cursor:pointer"  href="tel: 07424 605611"><span id="phonenumber"> 07424 605611</span></a>
+          <address id="address" onclick="mapsSelector()">
+            <span id="company"></span> <br>
+            <span id="address" style="text-decoration: underline; color: #bc9b5d; cursor:pointer"></span><br>
+            <span id="postcode"></span>
+          </address>
+          
+        </div>
+        <div class="opening-hours">
+          <h1><span><i class="far fa-clock"></i></span> Opening hours:</h1>
+          <table style="width:100%">
+            <tr>
+
+              <th>Days</th>
+              <th>Hours</th>
+
+            </tr>
+            <tr>
+              <td>All week:</td>
+              <td><span id="opening"></span> – <span id="closing"></span></td>
+            </tr>
+            <tr>
+              <td><span id="dayclose"></span> </td>
+              <td><span id="openorclosed"></span></td>
+            </tr>
+            
+          </table>
+        </div>
+        
+      </div>
+      <div class="form-container">
+
+        <form class="contact-form" action="https://submit-form.com/022jr6ISvHmUHc25Ka0aE">
+        <label for="name">Name:</label>
+        <input type="name" name="name" required>
+        <label for="email">Email Address:</label>
+        <input type="email" name="email" required>
+        <label for="text">Message:</label>
+        <textarea type="textarea" name="message" required></textarea>
+        <button class="phone-number"type="submit">Submit</button>
+      </form>
+        
+
+    </div>
+
+
+      <div class="container-map" style="background-color: none;">
+      <div id="map" ></div>
+    </div>
+      
+
+      
+
+    </main>
+
     <footer>
       <div class="copyright">
         <p>&copy 2020 Mohammad Sabil. All Rights Reserved. | Masss Tailor Southall </p>
@@ -293,10 +354,15 @@
 
   </div>
 
+  
+<script src="map.js"></script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ4VDNbIARn-nN9FniyTJdZFcd5XpWJgE&callback=initMap"
+  type="text/javascript"></script>
+
+
+  
   <script>
-
-
-
 
     var slideIndex = 1;
     showSlides(slideIndex);
@@ -328,6 +394,7 @@
 
 
   </script>
+  
   <!-- jquery-->
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
