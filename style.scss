@@ -140,7 +140,7 @@ body {
   //services
   section {
     text-align: center;
-    background-color: #fff;
+    background-color: black;
     margin-top: -20px;
     width: 100%;
     padding-bottom: 5rem;
@@ -148,7 +148,7 @@ body {
     h1 {
       padding-bottom: 2rem;
       font-size: 3rem;
-      color: $dark-color;
+      color: #bc9b5d;
       text-transform: uppercase;
     }
 
@@ -164,13 +164,14 @@ body {
       grid-column-gap: 0rem;
 
       .grid-item {
+        border-radius: 10px;
         height: 85%;
         width: 85%;
         justify-content: center;
         position: relative;
         background: black;
         overflow: hidden;
-        box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
+        box-shadow: 2px 2px 5px 1px rgba(#bc9b5d, 1);
 
         .ulist {
           height: 100%;
@@ -189,6 +190,7 @@ body {
           justify-content: center;
           text-align: center;
           flex-direction: column;
+          transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
           li {
             &:not(:last-child) {
               border-bottom: 2px solid white;
@@ -197,7 +199,7 @@ body {
 
           &:hover {
             z-index: 50;
-            background-color: black;
+            background-color: #bc9b5d;
             opacity: 1;
             color: white;
           }
