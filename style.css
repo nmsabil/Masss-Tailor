@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  max-width: 100%;
+  max-width: 2500px;
   margin: 0 auto;
 }
 
@@ -24,7 +24,7 @@ body {
   z-index: 100;
   position: -webkit-sticky;
   position: sticky;
-  background-color: black;
+  background-image: url(./img/Hero/dark-honeycomb.png);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,6 +37,7 @@ body {
           align-items: center;
   top: 0;
   left: 0;
+  border-bottom: 1px solid #bc9b5d;
   padding: 1.5rem 5%;
 }
 
@@ -56,7 +57,7 @@ body {
   margin-right: 1rem;
   letter-spacing: 1px;
   display: inline;
-  background-color: black;
+  background-color: transparent;
   cursor: pointer;
   -webkit-box-shadow: 1px 1px 1px transparent;
           box-shadow: 1px 1px 1px transparent;
@@ -69,7 +70,6 @@ body {
           box-shadow: 1px 1px 1px #bc9b5d;
   border: 1px solid #bc9b5d;
   box-shadow: 1px 1px 1px #bc9b5d;
-  padding: 1rem;
 }
 
 .container header .phone-number:hover h4 i {
@@ -164,10 +164,9 @@ body {
 
 .container section {
   text-align: center;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
   margin-top: -20px;
   width: 100%;
-  padding-bottom: 2rem;
 }
 
 .container section h1 {
@@ -178,12 +177,16 @@ body {
 }
 
 .container section .services-grid {
+  background-image: url(./img/Hero/dark-honeycomb.png);
+  border-radius: 30px;
+  border: 1px solid #bc9b5d;
   width: 85%;
   margin: 0 auto;
+  margin-bottom: 5rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 0rem;
@@ -204,8 +207,9 @@ body {
   position: relative;
   background: black;
   overflow: hidden;
-  -webkit-box-shadow: 2px 2px 5px 1px #bc9b5d;
-          box-shadow: 2px 2px 5px 1px #bc9b5d;
+  border: 1px solid #bc9b5d;
+  -webkit-box-shadow: 2px 2px 1px #bc9b5d;
+          box-shadow: 2px 2px 1px #bc9b5d;
 }
 
 .container section .services-grid .grid-item .ulist {
@@ -262,7 +266,7 @@ body {
   -o-object-position: center top;
      object-position: center top;
   overflow: hidden;
-  border: 2px solid #2d4d66;
+  border: 2px solid none;
   position: relative;
   z-index: 1;
   opacity: 0.7;
@@ -307,6 +311,55 @@ body {
   padding: 2rem 2rem;
 }
 
+.reviews {
+  max-width: 85%;
+  margin: 1rem auto;
+  border: 1px solid #bc9b5d;
+  border-radius: 30px;
+  background-image: url(./img/Hero/dark-honeycomb.png);
+  margin-bottom: 5rem;
+}
+
+.reviews .elfsight-app-9d7e7745-df8f-4488-8ee9-971bcbd8fb76 {
+  padding: 2rem;
+}
+
+.reviews .elfsight-app-9d7e7745-df8f-4488-8ee9-971bcbd8fb76 #eapps-google-reviews-9d7e7745-df8f-4488-8ee9-971bcbd8fb76 .Foundation__Inner-sc-11tbro4-1 .CommonLayout__Inner-d1flxf-1 > a {
+  display: none !important;
+}
+
+.GPjwE {
+  background-color: black !important;
+  color: #bc9b5d !important;
+  font-size: 1.5rem;
+  border: 0.5px solid #bc9b5d;
+  padding: 0.9rem;
+  margin-right: 1rem;
+  letter-spacing: 1px;
+  display: inline;
+  background-image: url(./img/Hero/dark-honeycomb.png);
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 1px transparent;
+          box-shadow: 1px 1px 1px transparent;
+  -webkit-transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) all;
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) all;
+}
+
+.GPjwE:hover {
+  -webkit-box-shadow: 1px 1px 1px #bc9b5d;
+          box-shadow: 1px 1px 1px #bc9b5d;
+  border: 1px solid #bc9b5d;
+  box-shadow: 1px 1px 1px #bc9b5d;
+}
+
+.review_title {
+  padding-bottom: 1rem;
+  font-size: 3rem;
+  color: #bc9b5d;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 /* Slideshow container */
 main {
   /* Slideshow container */
@@ -321,8 +374,7 @@ main {
 }
 
 main img {
-  border: 1px solid #bc9b5d;
-  max-height: 80vh;
+  max-height: calc(100vh - 100px);
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center top;
@@ -330,7 +382,7 @@ main img {
 }
 
 main .slideshow-container {
-  max-width: 90%;
+  max-width: 100%;
   position: relative;
   margin: auto;
   margin-bottom: 5rem;
@@ -349,13 +401,14 @@ main .next {
   width: auto;
   margin-top: -22px;
   padding: 1.5rem;
-  color: white;
+  color: #bc9b5d;
   font-weight: bold;
   font-size: 1.5rem;
   -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
-  background-color: #bc9b5d;
+  background-color: transparent;
+  border: 1px solid #bc9b5d;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -384,7 +437,7 @@ main .text {
           transform: translate(-50%, -50%);
   width: 60%;
   text-align: center;
-  text-shadow: #121113 1px 1px 1px;
+  text-shadow: black 1px 1px 1px;
   z-index: 1;
   text-transform: uppercase;
 }
@@ -445,7 +498,7 @@ main .fade {
 }
 
 .contactAddress h2 {
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
   font-size: 3rem;
   color: #bc9b5d;
   text-transform: uppercase;
@@ -459,12 +512,13 @@ main .col2 {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin: 0 auto;
-  width: 80%;
+  width: 85%;
   color: white;
   margin-bottom: 3rem;
   border: 1px solid #bc9b5d;
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 30px;
+  padding: 2rem;
+  background-image: url(./img/Hero/dark-honeycomb.png);
 }
 
 main .col2 h1 {
@@ -502,12 +556,13 @@ main .col2 .address {
 
 .form-container {
   border: 1px solid #bc9b5d;
-  border-radius: 5px;
+  background-image: url(./img/Hero/dark-honeycomb.png);
+  border-radius: 30px;
   padding: 10px;
   color: white;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 85%;
   padding-top: 2rem;
   margin-bottom: 2rem;
   margin-top: 30px;
@@ -538,10 +593,11 @@ main .col2 .address {
 
 .form-container .contact-form input {
   width: 30%;
+  border-radius: 5px;
   font-size: 2.3rem;
   margin-bottom: 1.5rem;
   height: 3rem;
-  background-color: black;
+  background-color: rgba(188, 155, 93, 0.1);
   border: 1px solid #bc9b5d;
   color: white;
 }
@@ -551,16 +607,18 @@ main .col2 .address {
 }
 
 .form-container .contact-form textarea {
+  border-radius: 5px;
   min-width: 80%;
   height: 10rem;
   margin-bottom: 1rem;
   font-size: 2.5rem;
-  background-color: black;
   border: 1px solid #bc9b5d;
   color: white;
+  background-color: rgba(188, 155, 93, 0.1);
 }
 
 .form-container .contact-form button {
+  background-color: rgba(188, 155, 93, 0.1);
   border-radius: 100px;
   color: #bc9b5d;
   font-size: 1.5rem;
@@ -568,9 +626,9 @@ main .col2 .address {
   padding: 0.9rem;
   margin-right: 1rem;
   letter-spacing: 1px;
+  font-weight: 700;
   width: 30%;
   display: inline;
-  background-color: black;
   cursor: pointer;
   -webkit-box-shadow: 1px 1px 1px transparent;
           box-shadow: 1px 1px 1px transparent;

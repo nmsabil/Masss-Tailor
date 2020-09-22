@@ -19,17 +19,16 @@ var openOrClosed = document.getElementById("openorclosed");
 var serviceLink = document.querySelectorAll("#servicelink");
 var serviceTitleInside = document.querySelectorAll("#test");
 
-
 // preloader animation
 window.onload = function () {
   var status = document.getElementById("status");
   //hide the preloader
-  $("#status").fadeOut(), $("#preloader").fadeOut(), $("body").delay(350).css({
-    overflow: "visible"
-  })
-}
-
-
+  $("#status").fadeOut(),
+    $("#preloader").fadeOut(),
+    $("body").delay(350).css({
+      overflow: "visible",
+    });
+};
 
 var jsonload = new XMLHttpRequest();
 var url = "config.json";
@@ -82,7 +81,6 @@ jsonload.onload = function () {
           forth[i].textContent = arr.services.description.forth[i];
           fifth[i].textContent = arr.services.description.fifth[i];
           sixth[i].textContent = arr.services.description.sixth[i];
-          seventh[i].textContent = arr.services.description.seventh[i];
         }
       }
     }
@@ -182,14 +180,14 @@ const lightboxChange = document.getElementById("lightbox-change");
 const lightboxOuter = document.getElementById("lightbox");
 
 fetch("config.json")
-  .then(res => res.json())
+  .then((res) => res.json())
 
-  .then(data => {
+  .then((data) => {
     gallery_images = data.gallery;
 
     if (galleryContainer) {
       function addImageToDOM(galleryImg) {
-        Object.entries(galleryImg).forEach(index => {
+        Object.entries(galleryImg).forEach((index) => {
           var imgDiv = document.createElement("img");
           imgDiv.classList = "image";
           imgDiv.src = index[1];
@@ -200,8 +198,8 @@ fetch("config.json")
 
       setTimeout(() => {
         const images = document.querySelectorAll(".image");
-        images.forEach(image => {
-          image.addEventListener("click", e => {
+        images.forEach((image) => {
+          image.addEventListener("click", (e) => {
             var target = e.target.src;
             lightboxChange.src = target;
             lightbox.classList.add("show");
@@ -212,14 +210,14 @@ fetch("config.json")
                   lightbox.classList.remove("show");
                 }
               };
-              close.addEventListener("click", e => {
+              close.addEventListener("click", (e) => {
                 lightbox.classList.remove("show");
               });
             }
             var b = images;
 
             if (next) {
-              next.addEventListener("click", e => {
+              next.addEventListener("click", (e) => {
                 lightboxChange.src = b[iterate()].src;
               });
             }
@@ -234,7 +232,7 @@ fetch("config.json")
             }
 
             if (prev) {
-              prev.addEventListener("click", e => {
+              prev.addEventListener("click", (e) => {
                 lightboxChange.src = b[diterate()].src;
               });
             }
@@ -267,5 +265,3 @@ function mapsSelector() {
   /* else use Google */ else
     window.open("https://goo.gl/maps/Wu47Wmqhdo3oeFn28");
 }
-
-
