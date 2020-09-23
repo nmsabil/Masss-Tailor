@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap");
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -16,7 +17,7 @@ body {
 }
 
 .container {
-  max-width: 2500px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -38,6 +39,7 @@ body {
   top: 0;
   left: 0;
   border-bottom: 1px solid #bc9b5d;
+  max-width: 100%;
   padding: 1.5rem 5%;
 }
 
@@ -170,10 +172,16 @@ body {
 }
 
 .container section h1 {
-  padding-bottom: 2rem;
+  padding-bottom: 0rem;
   font-size: 3rem;
+  width: 15%;
+  margin: 0 auto;
+  border: 1px solid #bc9b5d;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   color: #bc9b5d;
   text-transform: uppercase;
+  padding: 5px 10px;
 }
 
 .container section .services-grid {
@@ -311,6 +319,10 @@ body {
   padding: 2rem 2rem;
 }
 
+.container footer .logo_footer img {
+  width: 100px;
+}
+
 .container footer .phone a {
   color: #bc9b5d;
 }
@@ -320,9 +332,13 @@ body {
   padding: 10px;
 }
 
+.container footer .phone a:hover i {
+  font-size: 2.1rem;
+}
+
 .reviews {
   max-width: 85%;
-  margin: 1rem auto;
+  margin: 0 auto;
   border: 1px solid #bc9b5d;
   border-radius: 30px;
   background-image: url(./img/Hero/dark-honeycomb.png);
@@ -367,11 +383,19 @@ body {
 }
 
 .review_title {
-  padding-bottom: 1rem;
+  padding-bottom: 0rem;
   font-size: 3rem;
   color: #bc9b5d;
   text-transform: uppercase;
   text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid #bc9b5d;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: #bc9b5d;
+  text-transform: uppercase;
+  padding: 5px 10px;
 }
 
 /* Slideshow container */
@@ -512,7 +536,7 @@ main .fade {
 }
 
 .contactAddress h2 {
-  padding-bottom: 2rem;
+  padding-bottom: 0rem;
   font-size: 3rem;
   color: #bc9b5d;
   text-transform: uppercase;
@@ -746,6 +770,14 @@ h2 {
   color: #bc9b5d;
   text-transform: uppercase;
   text-align: center;
+  width: 15%;
+  margin: 0 auto;
+  border: 1px solid #bc9b5d;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: #bc9b5d;
+  text-transform: uppercase;
+  padding: 5px 10px;
 }
 
 .container-map #map > div {
@@ -759,6 +791,14 @@ h2 {
   text-transform: uppercase;
   width: 100%;
   text-align: center;
+  width: 20%;
+  margin: 0 auto;
+  border: 1px solid #bc9b5d;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: #bc9b5d;
+  text-transform: uppercase;
+  padding: 5px 10px;
 }
 
 .grid-box {
