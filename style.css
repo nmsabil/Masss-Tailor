@@ -328,6 +328,11 @@ body {
   display: none !important;
 }
 
+.edvQLK,
+.icpXLA {
+  border: 1px solid #bc9b5d;
+}
+
 .GPjwE {
   background-color: black !important;
   color: #bc9b5d !important;
@@ -554,7 +559,8 @@ main .col2 .address {
   text-align: left;
 }
 
-.form-container {
+.form-container,
+.about_container {
   border: 1px solid #bc9b5d;
   background-image: url(./img/Hero/dark-honeycomb.png);
   border-radius: 30px;
@@ -568,7 +574,8 @@ main .col2 .address {
   margin-top: 30px;
 }
 
-.form-container .contact-form {
+.form-container .contact-form,
+.about_container .contact-form {
   text-align: center;
   margin: 0 auto;
   display: -webkit-box;
@@ -586,39 +593,44 @@ main .col2 .address {
           flex-direction: column;
 }
 
-.form-container .contact-form label {
+.form-container .contact-form label,
+.about_container .contact-form label {
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
-.form-container .contact-form input {
+.form-container .contact-form input,
+.about_container .contact-form input {
   width: 30%;
   border-radius: 5px;
   font-size: 2.3rem;
   margin-bottom: 1.5rem;
   height: 3rem;
-  background-color: rgba(188, 155, 93, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid #bc9b5d;
   color: white;
 }
 
-.form-container .contact-form input:last-child {
+.form-container .contact-form input:last-child,
+.about_container .contact-form input:last-child {
   height: 20px;
 }
 
-.form-container .contact-form textarea {
+.form-container .contact-form textarea,
+.about_container .contact-form textarea {
   border-radius: 5px;
-  min-width: 80%;
+  min-width: 50%;
   height: 10rem;
   margin-bottom: 1rem;
   font-size: 2.5rem;
   border: 1px solid #bc9b5d;
   color: white;
-  background-color: rgba(188, 155, 93, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.form-container .contact-form button {
-  background-color: rgba(188, 155, 93, 0.1);
+.form-container .contact-form button,
+.about_container .contact-form button {
+  background-color: transparent;
   border-radius: 100px;
   color: #bc9b5d;
   font-size: 1.5rem;
@@ -638,11 +650,46 @@ main .col2 .address {
   margin-top: 10px;
 }
 
-.form-container .contact-form button:hover {
+.form-container .contact-form button:hover,
+.about_container .contact-form button:hover {
   -webkit-box-shadow: 1px 1px 1px #bc9b5d;
           box-shadow: 1px 1px 1px #bc9b5d;
   border: 1px solid #bc9b5d;
   box-shadow: 1px 1px 1px #bc9b5d;
+}
+
+.about_container {
+  padding-top: 10px;
+  padding: 2rem;
+  margin-top: 0;
+  margin-bottom: 5rem;
+}
+
+.about_container .about_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about_container .about_info {
+  width: 100%;
+  font-size: 1.5rem;
+  background-color: black;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: 1px solid #bc9b5d;
+}
+
+.about_container .about_info p {
+  padding: 1rem;
+}
+
+.about_picture > img {
+  background-size: cover;
+  width: 98%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-right: 2px solid #bc9b5d;
 }
 
 .container #map {
@@ -650,6 +697,14 @@ main .col2 .address {
   width: 100%;
   margin-bottom: 2rem;
   margin: 0 auto;
+}
+
+h2 {
+  padding-bottom: 2rem;
+  font-size: 3rem;
+  color: #bc9b5d;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .container-map #map > div {

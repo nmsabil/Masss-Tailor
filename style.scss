@@ -284,6 +284,11 @@ body {
   }
 }
 
+.edvQLK,
+.icpXLA {
+  border: 1px solid #bc9b5d;
+}
+
 // write a review button
 .GPjwE {
   background-color: black !important;
@@ -494,7 +499,8 @@ main .col2 {
   }
 }
 
-.form-container {
+.form-container,
+.about_container {
   border: 1px solid #bc9b5d;
   background-image: url(./img/Hero/dark-honeycomb.png);
   border-radius: 30px;
@@ -525,7 +531,7 @@ main .col2 {
       font-size: 2.3rem;
       margin-bottom: 1.5rem;
       height: 3rem;
-      background-color: rgba($color: #bc9b5d, $alpha: 0.1);
+      background-color: rgba($color: black, $alpha: 0.5);
       border: 1px solid #bc9b5d;
       color: white;
       &:last-child {
@@ -534,17 +540,17 @@ main .col2 {
     }
     textarea {
       border-radius: 5px;
-      min-width: 80%;
+      min-width: 50%;
       height: 10rem;
       margin-bottom: 1rem;
       font-size: 2.5rem;
 
       border: 1px solid #bc9b5d;
       color: white;
-      background-color: rgba($color: #bc9b5d, $alpha: 0.1);
+      background-color: rgba($color: black, $alpha: 0.5);
     }
     button {
-      background-color: rgba($color: #bc9b5d, $alpha: 0.1);
+      background-color: transparent;
       border-radius: 100px;
       color: #bc9b5d;
       font-size: 1.5rem;
@@ -571,11 +577,49 @@ main .col2 {
   }
 }
 
+.about_container {
+  padding-top: 10px;
+  padding: 2rem;
+  margin-top: 0;
+  margin-bottom: 5rem;
+  .about_form {
+    display: flex;
+  }
+  .about_info {
+    width: 100%;
+    font-size: 1.5rem;
+
+    background-color: black;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: 1px solid #bc9b5d;
+    p {
+      padding: 1rem;
+    }
+  }
+}
+
+.about_picture > img {
+  background-size: cover;
+  width: 98%;
+
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-right: 2px solid #bc9b5d;
+}
+
 .container #map {
   height: 500px;
   width: 100%;
   margin-bottom: 2rem;
   margin: 0 auto;
+}
+h2 {
+  padding-bottom: 2rem;
+  font-size: 3rem;
+  color: #bc9b5d;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .container-map #map > div {
