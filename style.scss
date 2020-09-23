@@ -253,14 +253,24 @@ body {
   }
 
   footer {
-    border-top: 3px solid $dark-color;
+    border-top: 1px solid #bc9b5d;
+    color: #bc9b5d;
     font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $secondary-color;
-    color: $light-color;
+    background-image: url(./img/Hero/dark-honeycomb.png);
+
     padding: 2rem 2rem;
+    .phone {
+      a {
+        color: #bc9b5d;
+        i {
+          font-size: 2rem;
+          padding: 10px;
+        }
+      }
+    }
   }
 }
 

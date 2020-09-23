@@ -4,7 +4,7 @@ function initMap() {
     lng: parseFloat(-0.38338),
   };
   var map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 15,
+    zoom: 10,
     center: location,
     styles: [
       { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
@@ -13,12 +13,12 @@ function initMap() {
       {
         featureType: "administrative.locality",
         elementType: "labels.text.fill",
-        stylers: [{ color: "#d59563" }],
+        stylers: [{ color: "#bc9b5d" }],
       },
       {
         featureType: "poi",
         elementType: "labels.text.fill",
-        stylers: [{ color: "#d59563" }],
+        stylers: [{ color: "#bc9b5d" }],
       },
       {
         featureType: "poi.park",
