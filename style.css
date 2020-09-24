@@ -32,8 +32,7 @@ body {
 
 .container header {
   z-index: 100;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   background-image: url(./img/Hero/dark-honeycomb.png);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,8 +47,8 @@ body {
   top: 0;
   left: 0;
   border-bottom: 1px solid #bc9b5d;
-  max-width: 100%;
-  padding: 1.5rem 5%;
+  width: 100%;
+  padding: 0.5rem 5%;
 }
 
 .container header .logo img {
@@ -141,7 +140,7 @@ body {
   font-size: 1.6rem;
   color: #bc9b5d;
   text-transform: uppercase;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   font-weight: 500;
   border: 1px solid transparent;
 }
