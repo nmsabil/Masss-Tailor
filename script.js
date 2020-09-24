@@ -23,9 +23,6 @@ const menu = document.querySelector(".navbar");
 const scrollspy = new VanillaScrollspy(menu, 1000);
 scrollspy.init();
 
-var y = window.scrollY;
-console.log(y);
-
 // preloader animation
 window.onload = function () {
   var status = document.getElementById("status");

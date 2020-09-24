@@ -312,6 +312,9 @@ body {
 
 .container footer {
   border-top: 1px solid #bc9b5d;
+  position: absolute;
+  left: 0;
+  right: 0;
   color: #bc9b5d;
   font-size: 1.5rem;
   display: -webkit-box;
