@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap");
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 body {
@@ -19,6 +19,15 @@ body {
 .container {
   max-width: 1500px;
   margin: 0 auto;
+}
+
+.container .anchor {
+  display: block;
+  height: 115px;
+  /*same height as header*/
+  margin-top: -115px;
+  /*same height as header*/
+  visibility: hidden;
 }
 
 .container header {
