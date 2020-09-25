@@ -146,6 +146,7 @@ body {
 
   //services
   section {
+    position: relative;
     text-align: center;
     background-color: rgba($color: #000000, $alpha: 0);
     margin-top: -20px;
@@ -863,6 +864,102 @@ h2 {
       p {
         font-size: 1.5rem;
         margin-bottom: 3rem;
+      }
+    }
+  }
+}
+
+.service_container.active {
+  display: flex;
+  height: 70%;
+  width: 80%;
+}
+.service_container {
+  transition: all 1s linear;
+  height: 0px;
+  display: none;
+  justify-content: space-between;
+  background-image: url(./img/Hero/dark-honeycomb.png);
+
+  width: 0px;
+  z-index: 500000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  border: 1px solid #bc9b5d;
+  .service_left {
+    width: 100%;
+    border-radius: 30px;
+    img {
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+      background-repeat: no-repeat;
+    }
+  }
+  .service_right {
+    width: 100%;
+    position: relative;
+
+    .service_close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      padding: 5px;
+      color: #bc9b5d;
+      font-size: 15px;
+      cursor: pointer;
+      &:hover {
+        font-size: 16px;
+      }
+    }
+
+    .service_title {
+      font-size: 3rem;
+      color: #bc9b5d;
+      margin: 10px;
+    }
+    .service_description {
+      font-size: 1.8rem;
+      padding: 10px;
+      color: #bc9b5d;
+    }
+    .service_logo {
+      height: 70px;
+      position: absolute;
+      transform: translateX(-50%);
+      margin-left: 10px;
+    }
+    .service_button {
+      margin: 0 auto;
+      position: absolute;
+      bottom: 0;
+      margin-top: 10px;
+      transform: translateX(-50%);
+      margin-bottom: 50px;
+
+      border-radius: 100px;
+      color: #bc9b5d;
+      font-size: 1.5rem;
+      border: 0.5px solid #bc9b5d;
+      padding: 0.9rem;
+      margin-right: 1rem;
+      letter-spacing: 1px;
+      display: inline;
+      background-color: transparent;
+      cursor: pointer;
+      box-shadow: 1px 1px 1px transparent;
+      transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) all;
+
+      &:hover {
+        box-shadow: 1px 1px 1px #bc9b5d;
+        border: 1px solid #bc9b5d;
+        box-shadow: 1px 1px 1px #bc9b5d;
       }
     }
   }

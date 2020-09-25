@@ -19,6 +19,35 @@ var openOrClosed = document.getElementById("openorclosed");
 var serviceLink = document.querySelectorAll("#servicelink");
 var serviceTitleInside = document.querySelectorAll("#test");
 
+const service_close = document.querySelector(".service_close");
+const service_container = document.querySelector(".service_container");
+const service_grid_items = document.querySelectorAll(".grid-item");
+
+// open service_container on service click
+service_grid_items.forEach((item) => {
+  console.log(item);
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+    service_container.classList.add("active");
+
+    // changes title in DOM
+    service_container.getElementsByClassName(
+      "service_title"
+    )[0].innerText = item.getElementsByTagName("a")[2].innerHTML;
+
+    //changes img src in DOM
+    service_container.getElementsByClassName(
+      "service_image"
+    )[0].src = item.getElementsByTagName("a")[1].children[0].currentSrc;
+  });
+});
+
+// close button for service container
+service_close.addEventListener("click", () => {
+  service_container.classList.remove("active");
+});
+
+// smooth scroll with spyscroll navbar
 const menu = document.querySelector(".navbar");
 const scrollspy = new VanillaScrollspy(menu, 1000);
 scrollspy.init();
