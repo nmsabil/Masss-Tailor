@@ -2,6 +2,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth !important;
+  overflow-x: hidden;
 }
 
 body {
@@ -738,6 +739,7 @@ main .col2 .address {
   text-align: center;
   position: absolute;
   bottom: 0;
+  display: none;
 }
 
 .about_container .about_info .icons i {
@@ -835,7 +837,7 @@ h2 {
 }
 
 .gallery-container img {
-  height: 250px;
+  height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -997,7 +999,7 @@ h2 {
   background-image: url(./img/Hero/dark-honeycomb.png);
   width: 0px;
   z-index: 500000;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -1043,20 +1045,23 @@ h2 {
 .service_container .service_right .service_title {
   font-size: 3rem;
   color: #bc9b5d;
-  margin: 10px;
+  margin: 20px;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
 .service_container .service_right .service_description {
   font-size: 1.8rem;
-  padding: 10px;
+  padding: 20px;
+  padding-top: 10px;
   color: #bc9b5d;
 }
 
 .service_container .service_right .service_logo {
   height: 70px;
   position: absolute;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, 350%);
+          transform: translate(-50%, 350%);
   margin-left: 10px;
 }
 
@@ -1160,8 +1165,8 @@ h2 {
 
 @media only screen and (min-width: 1600px) {
   .gallery-container {
-    -ms-grid-columns: (1fr)[8];
-        grid-template-columns: repeat(8, 1fr);
+    -ms-grid-columns: (1fr)[20];
+        grid-template-columns: repeat(20, 1fr);
   }
   .lightbox-container {
     position: relative;
@@ -1180,6 +1185,19 @@ h2 {
 }
 
 @media only screen and (max-width: 1000px) {
+  .container nav .nav-main a {
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+  .container header .logo img {
+    width: 120px;
+  }
+  .container nav .nav-main {
+    padding: 0.5rem 1rem;
+  }
+  .container header {
+    padding: 0.4rem 1%;
+  }
   .container section .services-grid .grid-item .ulist:hover {
     font-size: 1.4rem;
   }
@@ -1189,8 +1207,11 @@ h2 {
   main .text {
     font-size: 1.5rem;
   }
+  main .slideshow-container {
+    max-width: 100%;
+  }
   .container header .phone-number {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
   .container main .col2 h1 {
     font-size: 2.5rem;
@@ -1212,7 +1233,7 @@ h2 {
     width: 80%;
   }
   .container {
-    max-width: 95%;
+    max-width: 100%;
   }
   .gallery-container {
     -ms-grid-columns: (1fr)[3];
@@ -1230,7 +1251,14 @@ h2 {
     width: 80%;
   }
   html {
-    font-size: 50%;
+    font-size: 55%;
+  }
+  .container header .phone-number {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+  #phonenumber {
+    display: none;
   }
   .grid-item .btn {
     padding: 0.5rem 5%;
@@ -1238,6 +1266,15 @@ h2 {
   .gallery-container {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 603px) {
+  .container header .logo img {
+    display: none;
+  }
+  .container nav {
+    margin-left: 0;
   }
 }
 
@@ -1258,25 +1295,10 @@ h2 {
         grid-template-columns: repeat(1, 1fr);
   }
   html {
-    font-size: 40%;
+    font-size: 55%;
   }
   .container {
     max-width: 100%;
-  }
-  .container header .phone-number {
-    color: #121113;
-    font-size: 2rem;
-    border: 1px solid #2d4d66;
-    padding: 0.5rem;
-    margin-right: 1rem;
-    display: inline;
-  }
-  .container header .phone-number span {
-    display: none;
-  }
-  .container header .phone-number i {
-    font-size: 3rem;
-    padding: 1rem;
   }
   .container section .services-grid {
     -ms-grid-rows: (1fr)[4];
@@ -1323,9 +1345,6 @@ h2 {
   }
   html {
     font-size: 35%;
-  }
-  .container header .phone-number {
-    padding: 0.5rem;
   }
   .container main .slideshow-container {
     margin-bottom: 0;
@@ -1384,17 +1403,11 @@ h2 {
   .container main .col2 .address {
     margin-bottom: 2rem;
   }
-  .container nav .nav-main {
-    padding: 0.5rem 0.5rem;
-  }
-  .container nav span {
-    padding: 0 0.2rem;
-  }
 }
 
 @media only screen and (max-width: 350px) {
   html {
-    font-size: 30%;
+    font-size: 40%;
   }
   .lightbox-container {
     position: relative;

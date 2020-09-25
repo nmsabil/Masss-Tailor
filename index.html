@@ -405,49 +405,19 @@
       </footer>
     </div>
 
+    <!-- map -->
     <script src="map.js"></script>
-    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-
     <script
       async
       defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ4VDNbIARn-nN9FniyTJdZFcd5XpWJgE&callback=initMap"
       type="text/javascript"
     ></script>
+    <!-- Review widget -->
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 
-    <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
-
-      // Next/previous controls
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
-      }
-
-      // Thumbnail image controls
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
-      }
-
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-      }
-    </script>
+    <!-- slideshow -->
+    <script src="./slideshow.js"></script>
 
     <!-- jquery-->
     <script
@@ -455,7 +425,9 @@
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
       crossorigin="anonymous"
     ></script>
+    <!-- spyscroll -->
     <script src="./vanillajs-scrollspy.js"></script>
+    <!-- custom js -->
     <script src="script.js"></script>
   </body>
 </html>

@@ -23,9 +23,9 @@ const service_close = document.querySelector(".service_close");
 const service_container = document.querySelector(".service_container");
 const service_grid_items = document.querySelectorAll(".grid-item");
 
-// open service_container on service click
+// Service container funtionality and DOM manipulation
 service_grid_items.forEach((item) => {
-  console.log(item);
+  //add active class to service container on click to show
   item.addEventListener("click", (e) => {
     e.preventDefault();
     service_container.classList.add("active");
