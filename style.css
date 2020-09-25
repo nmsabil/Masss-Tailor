@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap");
 html {
-  font-size: 62.5%;
   scroll-behavior: smooth !important;
-  overflow-x: hidden;
+  font-size: 67.5%;
 }
 
 body {
   font-family: "Oxygen", sans-serif;
   background-color: black;
+  overflow-x: hidden !important;
 }
 
 * {
@@ -22,18 +22,10 @@ body {
   margin: 0 auto;
 }
 
-.container .anchor {
-  display: block;
-  height: 115px;
-  /*same height as header*/
-  margin-top: -115px;
-  /*same height as header*/
-  visibility: hidden;
-}
-
 .container header {
   z-index: 100;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   background-image: url(./img/Hero/dark-honeycomb.png);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -350,6 +342,7 @@ body {
 }
 
 .reviews {
+  overflow-x: hidden;
   max-width: 85%;
   margin: 0 auto;
   border: 1px solid #bc9b5d;
@@ -1058,10 +1051,11 @@ h2 {
 }
 
 .service_container .service_right .service_logo {
-  height: 70px;
+  width: 150px;
   position: absolute;
-  -webkit-transform: translate(-50%, 350%);
-          transform: translate(-50%, 350%);
+  margin-top: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   margin-left: 10px;
 }
 
@@ -1245,6 +1239,9 @@ h2 {
   .container section .services-grid .grid-item .ulist:hover {
     font-size: 1.1rem;
   }
+  .container section h1 {
+    width: 22%;
+  }
   .lightbox-container {
     position: relative;
     height: 72vh;
@@ -1263,9 +1260,13 @@ h2 {
   .grid-item .btn {
     padding: 0.5rem 5%;
   }
+  main .prev,
+  main .next {
+    padding: 1rem;
+  }
   .gallery-container {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -1275,6 +1276,9 @@ h2 {
   }
   .container nav {
     margin-left: 0;
+  }
+  main .text {
+    font-size: 1.2rem;
   }
 }
 
@@ -1344,7 +1348,7 @@ h2 {
     cursor: pointer;
   }
   html {
-    font-size: 35%;
+    font-size: 30%;
   }
   .container main .slideshow-container {
     margin-bottom: 0;
@@ -1362,7 +1366,6 @@ h2 {
   }
   .container section h1 {
     margin-top: 6rem;
-    padding-bottom: 0;
   }
   .container section .services-grid {
     -ms-grid-rows: (1fr)[7];
@@ -1373,6 +1376,10 @@ h2 {
   .container section .services-grid .grid-item.last {
     -ms-grid-column: 1;
     grid-column: 1 / 1;
+  }
+  .container main .prev,
+  .container main .next {
+    font-size: 2rem;
   }
   .container main .col2 {
     -webkit-box-orient: vertical;
@@ -1407,7 +1414,7 @@ h2 {
 
 @media only screen and (max-width: 350px) {
   html {
-    font-size: 40%;
+    font-size: 30%;
   }
   .lightbox-container {
     position: relative;
