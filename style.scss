@@ -642,10 +642,9 @@ main .col2 {
       text-align: center;
       position: absolute;
       bottom: 0;
-      display: none;
 
       i {
-        font-size: 30px;
+        font-size: 20px;
         color: #bc9b5d;
         border: 1px solid #bc9b5d;
         background-image: url(./img/Hero/dark-honeycomb.png);
@@ -656,7 +655,7 @@ main .col2 {
         span {
           margin-top: 10px;
           display: block;
-          font-size: 2rem;
+          font-size: 1.8rem;
           font-weight: 300;
         }
       }
@@ -1053,6 +1052,27 @@ h2 {
 }
 
 @media only screen and (max-width: 1000px) {
+  .about_container .about_info .icons {
+    flex-direction: column;
+    position: relative;
+  }
+  .about_picture {
+    overflow: hidden;
+  }
+  .about_picture > img {
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+  }
+
+  .about_container .about_info .icons i {
+    margin: 1rem;
+    font-size: 1.5rem;
+  }
+  .about_container .about_info .icons i span {
+    font-size: 1.5rem;
+  }
+
   .container nav .nav-main a {
     font-size: 1.2rem;
     font-weight: 800;
@@ -1099,7 +1119,11 @@ h2 {
     font-size: 2rem;
   }
 
-  .container section h1 {
+  .container section h1,
+  .review_title,
+  h2,
+  .gallery-title,
+  .contactAddress h2 {
     font-size: 2rem;
   }
   .lightbox {
@@ -1120,6 +1144,14 @@ h2 {
 }
 
 @media only screen and (max-width: 750px) {
+  .about_container .about_form {
+    flex-direction: column;
+  }
+
+  .about_picture > img {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
   .container section .services-grid .grid-item .ulist:hover {
     font-size: 1.1rem;
   }
@@ -1175,6 +1207,9 @@ h2 {
   .container section .services-grid .grid-item .ulist:hover {
     font-size: 1.7rem;
   }
+  h2 {
+    width: 25%;
+  }
 
   .container section .services-grid .grid-item .ulist:hover {
     opacity: 0;
@@ -1212,6 +1247,41 @@ h2 {
 }
 
 @media only screen and (max-width: 450px) {
+  .container main .col2 h1 {
+    font-size: 4rem;
+  }
+  #address {
+    font-size: 2rem;
+  }
+  tbody {
+    font-size: 2rem;
+  }
+  .form-container .contact-form > label {
+    font-size: 2.5rem;
+  }
+  .container footer .phone a i {
+    padding: 2px;
+    font-size: 3rem;
+  }
+  .container footer {
+    text-align: center;
+    flex-direction: column;
+    .copyright {
+      font-size: 2rem;
+      margin: 5px 0;
+    }
+  }
+  .form-container .contact-form button {
+    font-size: 2rem;
+  }
+  .about_container .about_info p {
+    font-size: 2rem;
+  }
+  .about_container .about_info .icons i,
+  .about_container .about_info .icons i span {
+    font-size: 3rem;
+  }
+
   .container section .services-grid .grid-item .btn {
     font-size: 3.4rem;
   }
@@ -1228,7 +1298,6 @@ h2 {
   .gallery-container {
     overflow: hidden;
     grid-gap: 5px;
-    margin: 0 5px;
 
     img {
       height: 300px;
