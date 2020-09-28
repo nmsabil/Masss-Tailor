@@ -930,7 +930,7 @@ h2 {
     }
     .service_logo {
       width: 150px;
-      position: absolute;
+      display: none;
       margin-top: auto;
       transform: translateX(-50%);
       margin-left: 10px;
@@ -1144,6 +1144,9 @@ h2 {
 }
 
 @media only screen and (max-width: 750px) {
+  .service_container .service_right .service_description {
+    font-size: 1.5rem;
+  }
   .about_container .about_form {
     flex-direction: column;
   }
@@ -1204,6 +1207,9 @@ h2 {
 }
 
 @media only screen and (max-width: 550px) {
+  .service_container .service_right .service_description {
+    font-size: 1.3rem;
+  }
   .container section .services-grid .grid-item .ulist:hover {
     font-size: 1.7rem;
   }
@@ -1247,6 +1253,13 @@ h2 {
 }
 
 @media only screen and (max-width: 450px) {
+  .service_container .service_right .service_description {
+    font-size: 2.5rem;
+  }
+  .service_container .service_right .service_button {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
   .container main .col2 h1 {
     font-size: 4rem;
   }
@@ -1367,6 +1380,9 @@ h2 {
 }
 
 @media only screen and (max-width: 350px) {
+  .service_container .service_right .service_description {
+    font-size: 2rem;
+  }
   html {
     font-size: 30%;
   }
