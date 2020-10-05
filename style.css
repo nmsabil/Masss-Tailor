@@ -1086,7 +1086,8 @@ h2 {
   -webkit-box-shadow: 1px 1px 1px #bc9b5d;
           box-shadow: 1px 1px 1px #bc9b5d;
   border: 1px solid #bc9b5d;
-  box-shadow: 1px 1px 1px #bc9b5d;
+  -webkit-box-shadow: 1px 1px 1px #e8e1d4;
+          box-shadow: 1px 1px 1px #e8e1d4;
 }
 
 #preloader {
@@ -1110,7 +1111,7 @@ h2 {
 
 .loading {
   font-size: 2rem;
-  color: white;
+  color: #bc9b5d;
   text-align: center;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -1119,14 +1120,22 @@ h2 {
   left: 5px;
 }
 
+.loading-logo {
+  width: 130px;
+  position: absolute;
+  left: -16px;
+  top: -40px;
+  margin: -20px 0 0 -20px;
+}
+
 .spinner {
   margin: 0 auto;
   font-size: 10px;
   position: relative;
   text-indent: -9999em;
-  border-top: 5px solid white;
-  border-right: 5px solid white;
-  border-bottom: 5px solid white;
+  border-top: 5px solid #bc9b5d;
+  border-right: 5px solid #bc9b5d;
+  border-bottom: 5px solid #bc9b5d;
   border-left: 5px solid black;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);

@@ -18,7 +18,13 @@ var closeDay = document.getElementById("dayclose");
 var openOrClosed = document.getElementById("openorclosed");
 var serviceLink = document.querySelectorAll("#servicelink");
 var serviceTitleInside = document.querySelectorAll("#test");
-
+const galleryContainer = document.getElementById("gallery-container");
+const lightbox = document.getElementById("lightbox");
+const close = document.getElementById("close");
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
+const lightboxChange = document.getElementById("lightbox-change");
+const lightboxOuter = document.getElementById("lightbox");
 const service_close = document.querySelector(".service_close");
 const service_container = document.querySelector(".service_container");
 const service_grid_items = document.querySelectorAll(".grid-item");
@@ -84,14 +90,14 @@ jsonload.onload = function () {
       });
     }
 
-    //address
+    //changing address to one in data.json
     if (address) {
       address.childNodes[1].textContent = arr.info.company;
       address.childNodes[5].textContent = arr.info.address;
       address.childNodes[8].textContent = arr.info.postcode;
     }
 
-    //services
+    //services data from data.json
     if (serviceImgs) {
       for (var i = 0; i < serviceImgs.length; i++) {
         //imgs
@@ -100,7 +106,7 @@ jsonload.onload = function () {
         serviceTitle[i].textContent = arr.services.title[i];
       }
 
-      //services description
+      //services description from data.json
       if (first) {
         for (var i = 0; i < first.length; i++) {
           first[i].textContent = arr.services.description.first[i];
@@ -113,7 +119,7 @@ jsonload.onload = function () {
       }
     }
 
-    //opening hours
+    //opening hours from data.json
     if (openingHour) {
       openingHour.innerText = arr.info.openinghours;
       closingHour.innerText = arr.info.closinghours;
@@ -123,20 +129,12 @@ jsonload.onload = function () {
   }
 };
 
-const galleryContainer = document.getElementById("gallery-container");
-const lightbox = document.getElementById("lightbox");
-const close = document.getElementById("close");
-const prev = document.getElementById("prev");
-const next = document.getElementById("next");
-const lightboxChange = document.getElementById("lightbox-change");
-const lightboxOuter = document.getElementById("lightbox");
-
 fetch("data.json")
   .then((res) => res.json())
 
   .then((data) => {
     gallery_images = data.gallery;
-
+    // grid gallery populating from data.json
     if (galleryContainer) {
       function addImageToDOM(galleryImg) {
         Object.entries(galleryImg).forEach((index) => {
