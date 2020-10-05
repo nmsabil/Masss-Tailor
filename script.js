@@ -64,18 +64,13 @@ window.onload = function () {
 };
 
 var jsonload = new XMLHttpRequest();
-var url = "config.json";
+var url = "data.json";
 
 jsonload.open("GET", url, true);
 jsonload.send();
 
 jsonload.onload = function () {
   var arr = JSON.parse(this.responseText);
-
-  //cta for call box
-  cta.addEventListener("click", () => {
-    window.open(`tel:${arr.info.phone}`);
-  });
 
   //changing all the #phonenumber to retreved phonenumber from json
   if (this.readyState == 4 && this.status == 200) {
@@ -126,85 +121,9 @@ jsonload.onload = function () {
       openOrClosed.innerText = arr.info.openorclose;
     }
   }
-
-  const serviceDetails = document.getElementById("service-card");
-
-  function addCard(item, description) {
-    var createCard = `
-      <div class="service-container">
-        <h1>${item}</h1>
-        <div class="service-main">
-     <p class="description">${description}</p>
-     <button class="btn-cta" id="cta-service"><i class="fas fa-phone"></i>Arrange A Booking</button>
-          <p>07424605611</p>
-        </div>
-    </div>
-    `;
-
-    return createCard;
-  }
-
-  setInterval(() => {
-    var btnServices = document.getElementById("cta-service");
-    if (btnServices) {
-      btnServices.addEventListener("click", () => {
-        window.open(`tel:${arr.info.phone}`);
-      });
-    }
-  }, 50);
-
-  if (window.location.pathname === "/service1.html") {
-    serviceDetails.innerHTML = addCard(
-      arr.services.pages.one.title,
-      arr.services.pages.one.description
-    );
-  }
-
-  if (window.location.pathname === "/service2.html") {
-    serviceDetails.innerHTML = addCard(
-      arr.services.pages.two.title,
-      arr.services.pages.two.description
-    );
-  }
-
-  if (window.location.pathname === "/service3.html") {
-    serviceDetails.innerHTML = addCard(
-      arr.services.pages.three.title,
-      arr.services.pages.three.description
-    );
-  }
-
-  if (window.location.pathname === "/service4.html") {
-    serviceDetails.innerHTML = addCard(
-      arr.services.pages.four.title,
-      arr.services.pages.four.description
-    );
-  }
-
-  if (window.location.pathname === "/service5.html") {
-    serviceDetails.innerHTML = addCard(
-      arr.services.pages.five.title,
-      arr.services.pages.five.description
-    );
-  }
-
-  if (window.location.pathname === "/service6.html") {
-    serviceDetails.innerHTML = addCard(
-      arr.services.pages.six.title,
-      arr.services.pages.six.description
-    );
-  }
-
-  if (window.location.pathname === "/service7.html") {
-    serviceDetails.innerHTML = addCard(
-      arr.services.pages.seven.title,
-      arr.services.pages.seven.description
-    );
-  }
 };
 
 const galleryContainer = document.getElementById("gallery-container");
-
 const lightbox = document.getElementById("lightbox");
 const close = document.getElementById("close");
 const prev = document.getElementById("prev");
@@ -212,7 +131,7 @@ const next = document.getElementById("next");
 const lightboxChange = document.getElementById("lightbox-change");
 const lightboxOuter = document.getElementById("lightbox");
 
-fetch("config.json")
+fetch("data.json")
   .then((res) => res.json())
 
   .then((data) => {
