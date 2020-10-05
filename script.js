@@ -1,5 +1,5 @@
 var phonenumber = document.querySelectorAll("#phonenumber");
-var cta = document.getElementById("cta");
+
 var phonenumbera = document.getElementById("phonenumber");
 var address = document.getElementById("address");
 var serviceImgs = document.querySelectorAll("#serviceimg");
@@ -11,13 +11,12 @@ var third = document.querySelectorAll("#third");
 var forth = document.querySelectorAll("#forth");
 var fifth = document.querySelectorAll("#fifth");
 var sixth = document.querySelectorAll("#sixth");
-var seventh = document.querySelectorAll("#seventh");
+
 var openingHour = document.getElementById("opening");
 var closingHour = document.getElementById("closing");
 var closeDay = document.getElementById("dayclose");
 var openOrClosed = document.getElementById("openorclosed");
-var serviceLink = document.querySelectorAll("#servicelink");
-var serviceTitleInside = document.querySelectorAll("#test");
+
 const galleryContainer = document.getElementById("gallery-container");
 const lightbox = document.getElementById("lightbox");
 const close = document.getElementById("close");
