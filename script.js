@@ -1,6 +1,6 @@
 const phonenumber = document.querySelectorAll("#phonenumber");
 
-const phonenumbera = document.getElementById("phonenumber");
+const phonenumbera = document.getElementById("cta");
 const address = document.getElementById("address");
 const serviceImgs = document.querySelectorAll("#serviceimg");
 const serviceTitle = document.querySelectorAll("#title");
