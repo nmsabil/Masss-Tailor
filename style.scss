@@ -773,7 +773,7 @@ h2 {
   right: 0;
   bottom: 0;
   background-color: rgba($color: #000000, $alpha: 0.5);
-  z-index: 100000;
+  z-index: 10000;
   display: none;
 
   &-container {
@@ -878,7 +878,7 @@ h2 {
   background-image: url(./img/Hero/dark-honeycomb.png);
 
   width: 0px;
-  z-index: 500000;
+  z-index: 500;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -972,7 +972,7 @@ h2 {
   right: 0;
   bottom: 0;
   background-image: url(./img/Hero/dark-honeycomb.png);
-  z-index: 9999000999;
+  z-index: 9999999;
 }
 #status {
   width: 40px;
@@ -981,7 +981,6 @@ h2 {
   left: 50%;
   top: 50%;
   margin: -20px 0 0 -20px;
-  overflow: hidden !important;
 }
 .loading {
   font-size: 2rem;

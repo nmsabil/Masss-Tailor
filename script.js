@@ -1,21 +1,21 @@
-var phonenumber = document.querySelectorAll("#phonenumber");
+const phonenumber = document.querySelectorAll("#phonenumber");
 
-var phonenumbera = document.getElementById("phonenumber");
-var address = document.getElementById("address");
-var serviceImgs = document.querySelectorAll("#serviceimg");
-var serviceTitle = document.querySelectorAll("#title");
-var servicesDescription = document.querySelectorAll("#listdescription");
-var first = document.querySelectorAll("#first");
-var second = document.querySelectorAll("#second");
-var third = document.querySelectorAll("#third");
-var forth = document.querySelectorAll("#forth");
-var fifth = document.querySelectorAll("#fifth");
-var sixth = document.querySelectorAll("#sixth");
+const phonenumbera = document.getElementById("phonenumber");
+const address = document.getElementById("address");
+const serviceImgs = document.querySelectorAll("#serviceimg");
+const serviceTitle = document.querySelectorAll("#title");
+const servicesDescription = document.querySelectorAll("#listdescription");
+const first = document.querySelectorAll("#first");
+const second = document.querySelectorAll("#second");
+const third = document.querySelectorAll("#third");
+const forth = document.querySelectorAll("#forth");
+const fifth = document.querySelectorAll("#fifth");
+const sixth = document.querySelectorAll("#sixth");
 
-var openingHour = document.getElementById("opening");
-var closingHour = document.getElementById("closing");
-var closeDay = document.getElementById("dayclose");
-var openOrClosed = document.getElementById("openorclosed");
+const openingHour = document.getElementById("opening");
+const closingHour = document.getElementById("closing");
+const closeDay = document.getElementById("dayclose");
+const openOrClosed = document.getElementById("openorclosed");
 
 const galleryContainer = document.getElementById("gallery-container");
 const lightbox = document.getElementById("lightbox");
@@ -59,7 +59,7 @@ scrollspy.init();
 
 // preloader animation
 window.onload = function () {
-  var status = document.getElementById("status");
+  const status = document.getElementById("status");
   //hide the preloader
   $("#status").fadeOut(),
     $("#preloader").fadeOut(),
@@ -68,18 +68,18 @@ window.onload = function () {
     });
 };
 
-var jsonload = new XMLHttpRequest();
-var url = "data.json";
+const jsonload = new XMLHttpRequest();
+const url = "data.json";
 
 jsonload.open("GET", url, true);
 jsonload.send();
 
 jsonload.onload = function () {
-  var arr = JSON.parse(this.responseText);
+  const arr = JSON.parse(this.responseText);
 
   //changing all the #phonenumber to retreved phonenumber from json
   if (this.readyState == 4 && this.status == 200) {
-    for (var i = 0; i < phonenumber.length; i++) {
+    for (let i = 0; i < phonenumber.length; i++) {
       phonenumber[i].textContent = arr.info.phone;
     }
     //changing the tel of href to retreved phonenumber from json
@@ -98,7 +98,7 @@ jsonload.onload = function () {
 
     //services data from data.json
     if (serviceImgs) {
-      for (var i = 0; i < serviceImgs.length; i++) {
+      for (let i = 0; i < serviceImgs.length; i++) {
         //imgs
         serviceImgs[i].src = arr.services.images[i];
         //title
@@ -107,7 +107,7 @@ jsonload.onload = function () {
 
       //services description from data.json
       if (first) {
-        for (var i = 0; i < first.length; i++) {
+        for (let i = 0; i < first.length; i++) {
           first[i].textContent = arr.services.description.first[i];
           second[i].textContent = arr.services.description.second[i];
           third[i].textContent = arr.services.description.third[i];
@@ -137,7 +137,7 @@ fetch("data.json")
     if (galleryContainer) {
       function addImageToDOM(galleryImg) {
         Object.entries(galleryImg).forEach((index) => {
-          var imgDiv = document.createElement("img");
+          const imgDiv = document.createElement("img");
           imgDiv.classList = "image";
           imgDiv.src = index[1];
           imgDiv.alt = "indian dress";
@@ -149,7 +149,7 @@ fetch("data.json")
         const images = document.querySelectorAll(".image");
         images.forEach((image) => {
           image.addEventListener("click", (e) => {
-            var target = e.target.src;
+            const target = e.target.src;
             lightboxChange.src = target;
             lightbox.classList.add("show");
 
@@ -163,14 +163,14 @@ fetch("data.json")
                 lightbox.classList.remove("show");
               });
             }
-            var b = images;
+            const b = images;
 
             if (next) {
               next.addEventListener("click", (e) => {
                 lightboxChange.src = b[iterate()].src;
               });
             }
-            var i = 0;
+            let i = 0;
             function iterate() {
               i++;
               if (i === images.length) {
@@ -186,7 +186,6 @@ fetch("data.json")
               });
             }
 
-            var i = 0;
             function diterate() {
               if (i <= 0) {
                 i = images.length;
