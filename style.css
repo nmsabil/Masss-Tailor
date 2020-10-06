@@ -822,9 +822,11 @@ main .col2 .address {
 
 .about_container .about_info p {
   font-size: 15px;
+  line-height: 1.3;
 }
 
 .about_container .about_info p span {
+  margin-top: 8px;
   display: block;
   font-weight: 600;
   color: #bc9b5d;

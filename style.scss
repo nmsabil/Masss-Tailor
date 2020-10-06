@@ -723,7 +723,9 @@ main .col2 {
   .about_info {
     p {
       font-size: 15px;
+      line-height: 1.3;
       span {
+        margin-top: 8px;
         display: block;
         font-weight: 600;
         color: #bc9b5d;
