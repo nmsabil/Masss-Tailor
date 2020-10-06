@@ -63,8 +63,8 @@ window.onload = function () {
   //hide the preloader
   $("#status").fadeOut(),
     $("#preloader").fadeOut(),
-    $("body").delay(350).css({
-      overflow: "visible",
+    $("body").delay(500).css({
+      overflow: "hidden",
     });
 };
 
