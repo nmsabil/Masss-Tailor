@@ -76,44 +76,6 @@
         "Repair, remove or replace zips",
         "Repair Seams"
       ]
-    },
-
-    "pages": {
-      "one": {
-        "title": "Indian Dress",
-        "description": "Our made to measure Indian Dress service starts with a personalised one to one meeting at our premises. All Indian suits are hand drafted, cut and fitted to the shape and style of our customers. Fitting session is available and re-shaping or re-styling is given to make the dress a perfect fit. ",
-        "price": "Price: £30"
-      },
-      "two": {
-        "title": "Punjabi Suits",
-        "description": "Punjabi Suits are personally hand drafted, cut and fitted to the shape and style of our customers. Punjabi suits are impeccably made and fits and feels better than any other readymade suits.",
-        "price": "£30"
-      },
-      "three": {
-        "title": "Saree Blouses",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolores eaque eius numquam asperiores a alias rerum neque? Laboriosam, deserunt?",
-        "price": "£30"
-      },
-      "four": {
-        "title": "Saree Falls",
-        "description": "Variety of professionally stitched saree falls. Exotic patterns and borders accents the elegance of your sarees. Unbeatable pricing, collection.",
-        "price": "£30"
-      },
-      "five": {
-        "title": "Suit",
-        "description": "Whether you are looking for the perfect bespoke suit, a flexible made to measure suit or a highly customised tailored suit, we are the best tailors to go to!",
-        "price": "£30"
-      },
-      "six": {
-        "title": "Alterations",
-        "description": "Alterations of pants, blouses, skirts, dresses, sew on loose buttons or pins. Alterations to pants and jeans. Shorten or lengthen, take in or let out. Personalise your outfit. Any other alterations, western or Indian you need help with.",
-        "price": "£30"
-      },
-      "seven": {
-        "title": "Garment Repairs",
-        "description": "Repair lining or relining. Sew on loose buttons or pins. Repair straps, remove or replace zips. Repair Seams",
-        "price": "£30"
-      }
     }
   },
 

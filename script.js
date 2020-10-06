@@ -1,5 +1,4 @@
 const phonenumber = document.querySelectorAll("#phonenumber");
-
 const phonenumbera = document.getElementById("cta");
 const address = document.getElementById("address");
 const serviceImgs = document.querySelectorAll("#serviceimg");
@@ -11,12 +10,10 @@ const third = document.querySelectorAll("#third");
 const forth = document.querySelectorAll("#forth");
 const fifth = document.querySelectorAll("#fifth");
 const sixth = document.querySelectorAll("#sixth");
-
 const openingHour = document.getElementById("opening");
 const closingHour = document.getElementById("closing");
 const closeDay = document.getElementById("dayclose");
 const openOrClosed = document.getElementById("openorclosed");
-
 const galleryContainer = document.getElementById("gallery-container");
 const lightbox = document.getElementById("lightbox");
 const close = document.getElementById("close");
@@ -27,13 +24,11 @@ const lightboxOuter = document.getElementById("lightbox");
 const service_close = document.querySelector(".service_close");
 const service_container = document.querySelector(".service_container");
 const service_grid_items = document.querySelectorAll(".grid-item");
-const status = document.getElementById("status");
-const preloader = document.getElementById("preloader");
 
 // preloader
 window.onload = function () {
   $("#status").fadeOut(), $("#preloader").fadeOut("slow");
-  $("#main").show().fadeIn();
+  $("#main").show();
 };
 
 // Service container funtionality and DOM manipulation
@@ -52,6 +47,10 @@ service_grid_items.forEach((item) => {
     service_container.getElementsByClassName(
       "service_image"
     )[0].src = item.getElementsByTagName("a")[1].children[0].currentSrc;
+    //changes description in DOM
+    service_container.getElementsByClassName(
+      "service_description"
+    )[0].innerHTML = item.getElementsByTagName("a")[0].innerHTML;
   });
 });
 
@@ -75,56 +74,41 @@ jsonload.onload = function () {
   const arr = JSON.parse(this.responseText);
 
   //changing all the #phonenumber to retreved phonenumber from json
-  if (this.readyState == 4 && this.status == 200) {
-    for (let i = 0; i < phonenumber.length; i++) {
-      phonenumber[i].textContent = arr.info.phone;
-    }
+
+  for (let i = 0; i < phonenumber.length; i++) {
+    phonenumber[i].textContent = arr.info.phone;
     //changing the tel of href to retreved phonenumber from json
-    if (phonenumbera) {
-      phonenumbera.addEventListener("click", () => {
-        window.open(`tel:${arr.info.phone}`);
-      });
-    }
-
+    phonenumbera.addEventListener("click", () => {
+      window.open(`tel:${arr.info.phone}`);
+    });
     //changing address to one in data.json
-    if (address) {
-      address.childNodes[1].textContent = arr.info.company;
-      address.childNodes[5].textContent = arr.info.address;
-      address.childNodes[8].textContent = arr.info.postcode;
-    }
-
+    address.childNodes[1].textContent = arr.info.company;
+    address.childNodes[5].textContent = arr.info.address;
+    address.childNodes[8].textContent = arr.info.postcode;
     //services data from data.json
-    if (serviceImgs) {
-      for (let i = 0; i < serviceImgs.length; i++) {
-        //imgs
-        serviceImgs[i].src = arr.services.images[i];
-        //title
-        serviceTitle[i].textContent = arr.services.title[i];
-      }
-
+    for (let i = 0; i < serviceImgs.length; i++) {
+      //imgs
+      serviceImgs[i].src = arr.services.images[i];
+      //title
+      serviceTitle[i].textContent = arr.services.title[i];
       //services description from data.json
-      if (first) {
-        for (let i = 0; i < first.length; i++) {
-          first[i].textContent = arr.services.description.first[i];
-          second[i].textContent = arr.services.description.second[i];
-          third[i].textContent = arr.services.description.third[i];
-          forth[i].textContent = arr.services.description.forth[i];
-          fifth[i].textContent = arr.services.description.fifth[i];
-          sixth[i].textContent = arr.services.description.sixth[i];
-        }
+      for (let i = 0; i < first.length; i++) {
+        first[i].textContent = arr.services.description.first[i];
+        second[i].textContent = arr.services.description.second[i];
+        third[i].textContent = arr.services.description.third[i];
+        forth[i].textContent = arr.services.description.forth[i];
+        fifth[i].textContent = arr.services.description.fifth[i];
+        sixth[i].textContent = arr.services.description.sixth[i];
       }
     }
-
     //opening hours from data.json
-    if (openingHour) {
-      openingHour.innerText = arr.info.openinghours;
-      closingHour.innerText = arr.info.closinghours;
-      closeDay.innerText = arr.info.closeday;
-      openOrClosed.innerText = arr.info.openorclose;
-    }
+    openingHour.innerText = arr.info.openinghours;
+    closingHour.innerText = arr.info.closinghours;
+    closeDay.innerText = arr.info.closeday;
+    openOrClosed.innerText = arr.info.openorclose;
   }
 };
-
+// populate gallery from data.json
 fetch("data.json")
   .then((res) => res.json())
 
