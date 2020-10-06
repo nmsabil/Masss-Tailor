@@ -64,7 +64,7 @@ window.onload = function () {
   $("#status").fadeOut(),
     $("#preloader").fadeOut(),
     $("body").delay(500).css({
-      overflow: "hidden",
+      overflow: "visible",
     });
 };
 
