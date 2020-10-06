@@ -29,15 +29,14 @@ const service_container = document.querySelector(".service_container");
 const service_grid_items = document.querySelectorAll(".grid-item");
 
 // preloader animation
-window.onload = function () {
-  const status = document.getElementById("status");
+$(window).on("load", function () {
   //hide the preloader
   $("#status").fadeOut(),
     $("#preloader").fadeOut(),
-    $("body").delay(500).css({
+    $("body").delay(50).css({
       overflow: "visible",
     });
-};
+});
 
 // Service container funtionality and DOM manipulation
 service_grid_items.forEach((item) => {
