@@ -29,7 +29,7 @@ const service_container = document.querySelector(".service_container");
 const service_grid_items = document.querySelectorAll(".grid-item");
 
 // preloader animation
-$(window).on("load", function () {
+$(document).ready(function () {
   //hide the preloader
   $("#status").fadeOut(),
     $("#preloader").fadeOut(),
