@@ -33,8 +33,8 @@ $(document).ready(function () {
   //hide the preloader
   $("#status").fadeOut(),
     $("#preloader").fadeOut(),
-    $("body").delay(50).css({
-      overflow: "visible",
+    $("body").delay(250).css({
+      overflow: "hidden",
     });
 });
 
