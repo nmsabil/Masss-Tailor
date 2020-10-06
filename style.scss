@@ -15,6 +15,101 @@ html {
 body {
   font-family: "Oxygen", sans-serif;
   background-color: black;
+  z-index: 9999;
+}
+
+#main {
+  display: none;
+}
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(./img/Hero/dark-honeycomb.png);
+  z-index: 9999999;
+}
+#status {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -20px 0 0 -20px;
+  z-index: 99999991;
+}
+.loading {
+  font-size: 2rem;
+  color: #bc9b5d;
+  text-align: center;
+  transform: translate(-50%, -50%);
+
+  position: relative;
+  top: 20px;
+  left: 5px;
+  z-index: 99999991;
+}
+
+@media only screen and (max-width: 450px) {
+  .loading {
+    font-size: 4rem;
+    left: 5px;
+  }
+}
+
+.loading-logo {
+  width: 130px;
+  position: absolute;
+  left: -16px;
+  top: -40px;
+  margin: -20px 0 0 -20px;
+}
+.spinner {
+  margin: 0 auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 5px solid rgba(#bc9b5d, 1);
+  border-right: 5px solid rgba(#bc9b5d, 1);
+  border-bottom: 5px solid rgba(#bc9b5d, 1);
+  border-left: 5px solid black;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+.spinner,
+.spinner:after {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.service-card.hide {
+  display: none;
+}
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 * {
@@ -961,97 +1056,6 @@ h2 {
         box-shadow: 1px 1px 1px #e8e1d4;
       }
     }
-  }
-}
-
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url(./img/Hero/dark-honeycomb.png);
-  z-index: 9999999;
-}
-#status {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: -20px 0 0 -20px;
-  z-index: 99999991;
-}
-.loading {
-  font-size: 2rem;
-  color: #bc9b5d;
-  text-align: center;
-  transform: translate(-50%, -50%);
-
-  position: relative;
-  top: 20px;
-  left: 5px;
-  z-index: 99999991;
-}
-
-@media only screen and (max-width: 450px) {
-  .loading {
-    font-size: 4rem;
-    left: 5px;
-  }
-}
-
-.loading-logo {
-  width: 130px;
-  position: absolute;
-  left: -16px;
-  top: -40px;
-  margin: -20px 0 0 -20px;
-}
-.spinner {
-  margin: 0 auto;
-  font-size: 10px;
-  position: relative;
-  text-indent: -9999em;
-  border-top: 5px solid rgba(#bc9b5d, 1);
-  border-right: 5px solid rgba(#bc9b5d, 1);
-  border-bottom: 5px solid rgba(#bc9b5d, 1);
-  border-left: 5px solid black;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-animation: load8 1.1s infinite linear;
-  animation: load8 1.1s infinite linear;
-}
-.spinner,
-.spinner:after {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-}
-
-.service-card.hide {
-  display: none;
-}
-
-@-webkit-keyframes load8 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes load8 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
   }
 }
 

@@ -27,16 +27,14 @@ const lightboxOuter = document.getElementById("lightbox");
 const service_close = document.querySelector(".service_close");
 const service_container = document.querySelector(".service_container");
 const service_grid_items = document.querySelectorAll(".grid-item");
+const status = document.getElementById("status");
+const preloader = document.getElementById("preloader");
 
-// preloader animation
-$(document).ready(function () {
-  //hide the preloader
-  $("#status").fadeOut(),
-    $("#preloader").fadeOut(),
-    $("body").delay(250).css({
-      overflow: "hidden",
-    });
-});
+// preloader
+window.onload = function () {
+  $("#status").fadeOut(), $("#preloader").fadeOut("slow");
+  $("#main").show().fadeIn();
+};
 
 // Service container funtionality and DOM manipulation
 service_grid_items.forEach((item) => {
