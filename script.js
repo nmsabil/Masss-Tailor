@@ -28,6 +28,17 @@ const service_close = document.querySelector(".service_close");
 const service_container = document.querySelector(".service_container");
 const service_grid_items = document.querySelectorAll(".grid-item");
 
+// preloader animation
+window.onload = function () {
+  const status = document.getElementById("status");
+  //hide the preloader
+  $("#status").fadeOut(),
+    $("#preloader").fadeOut(),
+    $("body").delay(500).css({
+      overflow: "visible",
+    });
+};
+
 // Service container funtionality and DOM manipulation
 service_grid_items.forEach((item) => {
   //add active class to service container on click to show
@@ -56,17 +67,6 @@ service_close.addEventListener("click", () => {
 const menu = document.querySelector(".navbar");
 const scrollspy = new VanillaScrollspy(menu, 1000);
 scrollspy.init();
-
-// preloader animation
-window.onload = function () {
-  const status = document.getElementById("status");
-  //hide the preloader
-  $("#status").fadeOut(),
-    $("#preloader").fadeOut(),
-    $("body").delay(500).css({
-      overflow: "visible",
-    });
-};
 
 const jsonload = new XMLHttpRequest();
 const url = "data.json";

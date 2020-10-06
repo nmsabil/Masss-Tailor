@@ -1106,6 +1106,7 @@ h2 {
   left: 50%;
   top: 50%;
   margin: -20px 0 0 -20px;
+  z-index: 99999991;
 }
 
 .loading {
@@ -1117,6 +1118,7 @@ h2 {
   position: relative;
   top: 20px;
   left: 5px;
+  z-index: 99999991;
 }
 
 @media only screen and (max-width: 450px) {
