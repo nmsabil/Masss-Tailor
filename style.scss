@@ -16,6 +16,7 @@ body {
   font-family: "Oxygen", sans-serif;
   background-color: black;
   z-index: 9999;
+  overflow-x: hidden !important;
 }
 
 #main {
@@ -1305,6 +1306,9 @@ h2 {
 }
 
 @media only screen and (max-width: 450px) {
+  #about {
+    margin-top: 5rem;
+  }
   .service_container .service_right .service_description {
     font-size: 2.5rem;
   }

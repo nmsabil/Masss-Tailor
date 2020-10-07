@@ -19,12 +19,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Masss Tailor Southall London - massstailor.co.uk</title>
     <meta name="author" content="Marajuddin" />
+    <!-- Aos css  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- custom css -->
     <link rel="stylesheet" href="style.css" />
-
-    <script
-      src="https://kit.fontawesome.com/d2f9e4dfbd.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script
@@ -167,7 +165,7 @@
               </a>
             </div>
           </div>
-          <div class="grid-item">
+          <div class="grid-item" data-aos="flip-up">
             <a
               style="cursor: pointer"
               class="servicelink"
@@ -187,7 +185,7 @@
 
             <a style="cursor: pointer" class="btn" id="title"></a>
           </div>
-          <div class="grid-item">
+          <div class="grid-item" data-aos="flip-up">
             <a style="cursor: pointer" class="servicelink" id="servicelink">
               <ul class="ulist" id="listdescription">
                 <li id="second"></li>
@@ -201,7 +199,7 @@
             </a>
             <a style="cursor: pointer" class="btn" id="title"></a>
           </div>
-          <div class="grid-item">
+          <div class="grid-item" data-aos="flip-up">
             <a style="cursor: pointer" class="servicelink" id="servicelink">
               <ul class="ulist" id="listdescription">
                 <li id="third"></li>
@@ -215,7 +213,7 @@
             </a>
             <a style="cursor: pointer" class="btn" id="title"></a>
           </div>
-          <div class="grid-item">
+          <div class="grid-item" data-aos="flip-up">
             <a style="cursor: pointer" class="servicelink" id="servicelink">
               <ul class="ulist" id="listdescription">
                 <li id="forth"></li>
@@ -229,7 +227,7 @@
             </a>
             <a style="cursor: pointer" class="btn" id="title"></a>
           </div>
-          <div class="grid-item">
+          <div class="grid-item" data-aos="flip-up">
             <a style="cursor: pointer" class="servicelink" id="servicelink">
               <ul class="ulist" id="listdescription">
                 <li id="fifth"></li>
@@ -244,7 +242,7 @@
             </a>
           </div>
 
-          <div class="grid-item">
+          <div class="grid-item" data-aos="flip-up">
             <a style="cursor: pointer" class="servicelink" id="servicelink">
               <ul class="ulist" id="listdescription">
                 <li id="sixth"></li>
@@ -262,7 +260,7 @@
       </section>
 
       <section id="about" class="page">
-        <div class="review_section">
+        <div class="review_section" data-aos="fade-right">
           <h3 class="review_title">What our customers say</h3>
           <div class="reviews">
             <div
@@ -271,9 +269,9 @@
           </div>
         </div>
 
-        <h2>About</h2>
+        <h2 data-aos="fade-right" data-aos-offset="150">About</h2>
 
-        <div class="about_container">
+        <div class="about_container" data-aos="fade-right">
           <div
             class="about_form"
             action="https://submit-form.com/022jr6ISvHmUHc25Ka0aE"
@@ -306,9 +304,11 @@
         </div>
       </section>
 
-      <h1 class="gallery-title">Our Work</h1>
+      <h1 class="gallery-title" data-aos="zoom-in-up" data-aos-offset="150">
+        Our Work
+      </h1>
 
-      <div class="grid-box" id="work">
+      <div class="grid-box" id="work" data-aos="zoom-in">
         <div class="gallery-container page" id="gallery-container"></div>
       </div>
 
@@ -327,7 +327,7 @@
         </div>
       </div>
 
-      <main id="contact" class="contactAddress page">
+      <main id="contact" data-aos="zoom-in" class="contactAddress page">
         <h2>Contact</h2>
         <div class="col2">
           <div class="address">
@@ -426,6 +426,14 @@
         </div>
       </footer>
     </div>
+    <!-- aos scroll animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- fontawesome icons -->
+    <script
+      src="https://kit.fontawesome.com/d2f9e4dfbd.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- jquery-->
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
@@ -450,5 +458,10 @@
     <script src="./plugins/vanillajs-scrollspy.js"></script>
     <!-- custom js -->
     <script src="script.js"></script>
+    <!-- aos init -->
+    <script>
+      AOS.init();
+      window.addEventListener("load", AOS.refresh);
+    </script>
   </body>
 </html>
